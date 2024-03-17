@@ -7,9 +7,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        
       - name: build
         run: |
           docker build -t ngile/simple-app:latest .
+
       - name: publish
         run: |
+          docker login -u ngile -p ${{ secrets.DOCKER_HUB_TOKEN}}
           docker push ngile/simple-app:latest
