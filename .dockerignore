@@ -1,1 +1,6 @@
 Dockerfile
+.git
+.github
+.gitignore
+.dockerignore
+
