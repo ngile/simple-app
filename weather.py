@@ -14,7 +14,8 @@ def get_current_weather(city="Sofia"):
 
 
 def main():
-    city: str = os.getenv("CURRENT_CITY", "Sofia")
+    city: str = os.getenv("CURRENT_CITY") if os.getenv("CURRENT_CITY") else "NA"
+    # city: str = os.getenv("CURRENT_CITY")
 
     weather_data = get_current_weather(city)
     print("\n")

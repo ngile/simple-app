@@ -37,7 +37,7 @@ def main():
     elif os.getenv("CURRENT_CITY"):
         city = os.getenv("CURRENT_CITY")
     else:
-        city = "Sofia"
+        city = "NA"
 
     app = create_app(city)
     serve(app, host="0.0.0.0", port=8000)
